@@ -10,6 +10,15 @@
 
 <body>
   <p>Hello world!</p>
+  <div id="tag"></div>
+  <script type="text/javascript">
+    window.onload = function() {
+      var phrase =  decodeURI(location.pathname.substring(1).split('/').join(" "));
+      var tag = document.getElementById("tag");
+      var newNode = document.createTextNode(phrase);
+      tag.appendChild(newNode);
+    };
+  </script>
 </body>
 
 </html>
